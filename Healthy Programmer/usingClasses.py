@@ -1,7 +1,6 @@
 import time
 from pygame import mixer
 
-
 class Play:
     def __init__(self, file, t, msg):
         self.file = file
