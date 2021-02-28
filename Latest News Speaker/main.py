@@ -13,13 +13,13 @@ url = ('http://newsapi.org/v2/top-headlines?'
 response = requests.get(url)
 data=dict(response.json())
 
-hdlns=list()
+headlines=list()
 for item in data["articles"]:
     if item.get("source").get("id")=='the-times-of-india':
-        hdlns.append(item.get("title"))
+        headlines.append(item.get("title"))
 i=1
 speak("Nitish , welcomes you here , have a good day")
-for item in hdlns:
+for item in headlines:
     speak(f"Headline number {i} : {item}")
     i+=1
 
